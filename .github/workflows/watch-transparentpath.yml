@@ -1,0 +1,11 @@
+name: Get latest release version
+on:
+  schedule:
+    - cron:  '0 10 * * *'
+jobs:
+  get-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+      - run: pip index versions transparentpath
