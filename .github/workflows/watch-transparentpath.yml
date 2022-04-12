@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
       - run: |
-        export TP_VERSION=$(pip index versions transparentpath | grep -Po '(?<=\().*(?=\))')
-        echo $TP_VERSION
+          export TP_VERSION=$(pip index versions transparentpath | grep -Po '(?<=\().*(?=\))')
+          echo $TP_VERSION
       - run: echo ${{ env.TP_VERSION }}
